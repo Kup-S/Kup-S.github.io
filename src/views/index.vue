@@ -1,4 +1,5 @@
 <template>
+<!-- 首页 -->
   <div class="index">
     <Wallpaper />
      <Top />
