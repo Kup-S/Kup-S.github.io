@@ -32,7 +32,7 @@ jobs:
         env:
           ACCESS_TOKEN: ${{ secrets.AUTO_PACK }}
           # 在部署前要checkout的基本分支，默认是master
-          BASE_BRANCH: code # The branch the action should deploy from.
+          BASE_BRANCH: dev # The branch the action should deploy from.
           # 指定部署的分支，默认是 gh-pages 分支
           BRANCH: master # The branch the action should deploy to.
           # 存储库中要部署的文件夹。
