@@ -1,7 +1,7 @@
 <template>
   <div class="index">
     <Wallpaper />
-    <Top />
+     <Top />
     <Shade />
     <Bottom />
   </div>

@@ -12,8 +12,8 @@ import {
     // Radio,
     // Tree,
     // Dialog,
-    // Row,
-    // Col,
+    Row,
+    Col,
     // Checkbox,
     // CheckboxButton,
     // CheckboxGroup,
@@ -61,8 +61,8 @@ const element = {
         // Vue.use(Radio)
         // Vue.use(Tree)
         // Vue.use(Dialog)
-        // Vue.use(Row)
-        // Vue.use(Col)
+        Vue.use(Row)
+        Vue.use(Col)
         // Vue.use(Checkbox)
         // Vue.use(CheckboxButton)
         // Vue.use(CheckboxGroup)
