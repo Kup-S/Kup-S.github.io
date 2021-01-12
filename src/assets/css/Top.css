@@ -1,0 +1,14 @@
+#login {
+    background-image: linear-gradient(to right, #ff9569, #e92758);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-top: 20px;
+    font: normal 800 60px "黑体";
+  }
+  .div {
+    vertical-align: middle;
+    display: inline-block;
+  }
+  .input {
+    background: transparent;
+  }
