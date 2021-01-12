@@ -13,6 +13,6 @@ npm run serve
 npm run build
 ```
 
-
+**v:4.0**
 **Kups**  
 **2020-12-14**
