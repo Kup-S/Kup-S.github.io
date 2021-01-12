@@ -6,8 +6,8 @@
     <Shade />
     <Bottom />
   </div>
+  <!-- 这里知识临时代码，为了推送 -->
 </template>
-
 <script>
 import Top from "@/components/Top.vue";
 import Wallpaper from "@/components/Wallpaper.vue";
@@ -17,7 +17,10 @@ export default {
   name: "Index",
   components: { Top, Wallpaper,Shade, Bottom },
   data() {
-    return {};
+    return {
+
+      aa:"",
+    };
   },
 };
 </script>
