@@ -6,7 +6,7 @@
     <Shade />
     <Bottom />
   </div>
-  <!-- 这里知识临时代码，为了推送 -->
+ 
 </template>
 <script>
 import Top from "@/components/Top.vue";
@@ -18,8 +18,6 @@ export default {
   components: { Top, Wallpaper,Shade, Bottom },
   data() {
     return {
-
-      aa:"",
     };
   },
 };
