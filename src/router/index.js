@@ -5,7 +5,7 @@ Vue.use(Router)
 
 
 export default new Router({
-  mode: 'history',
+  // mode: 'history',
   routes: [   //配置路由
     // {
     //   path: '/',
@@ -16,7 +16,6 @@ export default new Router({
     //   name: 'Index',//此模块
     //   component:() =>import('@/views/index.vue') //此路径下对应的文件
     // },
-    
     {
       path: '',//路径
       name: 'Index',//此模块
