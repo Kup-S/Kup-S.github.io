@@ -36,7 +36,7 @@
 
 <script>
 export default {
-  name: "404",
+  name: "Page404",
   computed: {
     message() {
       return "小伙子,骨骼如此惊奇！";

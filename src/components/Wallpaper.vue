@@ -41,7 +41,6 @@ export default {
         this.index =
           Math.floor(Math.random() * (this.imageList.length - 1 - 0 + 1)) + 0; //随机图片
         this.nowImage = this.imageList[this.index];
-        console.log(this.index)
       });
     },
     cut(msg) {

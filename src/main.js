@@ -13,8 +13,17 @@ Vue.use(element)
 
 Vue.prototype.$http = axios
 
+var _hmt = _hmt || [];
+window._hmt = _hmt; 
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?fcc26fec4235841efbea6c4893612b4e";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
 
 new Vue({
   render: h => h(App),
   router
 }).$mount('#app')
+
