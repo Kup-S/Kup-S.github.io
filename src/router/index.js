@@ -15,16 +15,19 @@ export default new Router({
     //   name: 'Index',//此模块
     //   component:() =>import('@/views/index.vue') //此路径下对应的文件
     // },
-     {
-      path: '',//路径
+    {
+      path: '/',//路径
       name: 'Index',//此模块
-      component:() =>import('@/views/index.vue'), //此路径下对应的文件
-     
+      component: () => import('@/views/index.vue'), //此路径下对应的文件
     },
     {
-      path: '*',//路径
+      path: '/404',//路径
       name: 'Page404',//此模块
-      component:() =>import('@/views/404.vue') //此路径下对应的文件
+      component: () => import('@/views/404.vue') //此路径下对应的文件
+    },
+    {
+      path: '*',
+      redirect: '404'
     },
   ]
 })
