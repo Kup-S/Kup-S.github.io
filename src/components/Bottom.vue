@@ -31,10 +31,14 @@ export default {
 a{
  text-decoration: none;
 }
- 
+
+/* 未访问的链接 */
+.email a:link{
+   color: rgb(255, 255, 255);
+}
 /* 未访问的链接 */
 .email a:visited {
-   color: rgb(255, 255, 255);
+   color: rgb(209, 209, 209);
    text-decoration: line-through;
  } /* 已访问的链接 */
  .email a:hover {
