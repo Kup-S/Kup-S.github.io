@@ -36,7 +36,7 @@ export default {
     bottom: 0;
     left: 0;
     right: 0;
-    /* z-index: -5; */
+    z-index: -5;
     background-attachment: fixed;
 }
 </style>

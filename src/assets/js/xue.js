@@ -1,42 +1,43 @@
-(function() {
-	var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame ||
-			function(callback) {
-				window.setTimeout(callback, 1000 / 60);
-			};
-	window.requestAnimationFrame = requestAnimationFrame;
-})();
 
-(function() {
+// function aa() {
+// 	var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame ||
+// 		function (callback) {
+// 			window.setTimeout(callback, 1000 / 60);
+// 		};
+// 	console.log("abc", requestAnimationFrame)
+// 	window.requestAnimationFrame = requestAnimationFrame;
+// };
+
+function startSnow() {
 	var flakes = [],
-			canvas = document.getElementById("Snow"), //画布ID，与上一步创建的画布对应
-			ctx = canvas.getContext("2d"),
-			flakeCount = 200,  //雪花数量，数值越大雪花数量越多
-			mX = -100,
-			mY = -100;
-
+		canvas = document.getElementById("canvas_snow"), //画布ID，与上一步创建的画布对应
+		ctx = canvas.getContext("2d"),
+		flakeCount = 200,  //雪花数量，数值越大雪花数量越多
+		mX = -100,
+		mY = -100;
+	// console.log("aa", canvas);
 	canvas.width = window.innerWidth;
 	canvas.height = window.innerHeight;
 
 	function snow() {
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
-
 		for (var i = 0; i < flakeCount; i++) {
 			var flake = flakes[i],
-					x = mX,
-					y = mY,
-					minDist = 150,  //雪花距离鼠标指针的最小值，小于这个距离的雪花将受到鼠标的排斥
-					x2 = flake.x,
-					y2 = flake.y;
+				x = mX,
+				y = mY,
+				minDist = 150,  //雪花距离鼠标指针的最小值，小于这个距离的雪花将受到鼠标的排斥
+				x2 = flake.x,
+				y2 = flake.y;
 
 			var dist = Math.sqrt((x2 - x) * (x2 - x) + (y2 - y) * (y2 - y)),
-					dx = x2 - x,
-					dy = y2 - y;
+				dx = x2 - x,
+				dy = y2 - y;
 
 			if (dist < minDist) {
 				var force = minDist / (dist * dist),
-						xcomp = (x - x2) / dist,
-						ycomp = (y - y2) / dist,
-						deltaV = force / 2;
+					xcomp = (x - x2) / dist,
+					ycomp = (y - y2) / dist,
+					deltaV = force / 2;
 
 				flake.velX -= deltaV * xcomp;
 				flake.velY -= deltaV * ycomp;
@@ -80,18 +81,19 @@
 
 	function init() {
 		let date = new Date();
-		let month = date.getMonth()+1;
-		if(month === 12||month === 1) {
-			document.getElementById("Snow").style.cssText="width: 100%; height: 100%"
-		} else {
-			document.getElementById("Snow").style.cssText="width: 0; height: 0"
-		}
+		let month = date.getMonth() + 1;
+		//注释只在12月与1月显示
+		// if (month === 12 || month === 1) {
+			document.getElementById("canvas_snow").style.cssText = "width: 100%; height: 100%"
+		// } else {
+		// 	document.getElementById("canvas_snow").style.cssText = "width: 0; height: 0"
+		// }
 		for (var i = 0; i < flakeCount; i++) {
 			var x = Math.floor(Math.random() * canvas.width),
-					y = Math.floor(Math.random() * canvas.height),
-					size = (Math.random() * 3) + 2,  //加号后面的值，雪花大小，为基准值，数值越大雪花越大
-					speed = (Math.random() * 1) + 0.5,  //加号后面的值，雪花速度，为基准值，数值越大雪花速度越快
-					opacity = (Math.random() * 0.5) + 0.3;  //加号后面的值，为基准值，范围0~1
+				y = Math.floor(Math.random() * canvas.height),
+				size = (Math.random() * 3) + 2,  //加号后面的值，雪花大小，为基准值，数值越大雪花越大
+				speed = (Math.random() * 1) + 0.5,  //加号后面的值，雪花速度，为基准值，数值越大雪花速度越快
+				opacity = (Math.random() * 0.5) + 0.3;  //加号后面的值，为基准值，范围0~1
 
 			flakes.push({
 				speed: speed,
@@ -110,13 +112,17 @@
 		snow();
 	};
 
-	document.addEventListener("mousemove", function(e) {
+	document.addEventListener("mousemove", function (e) {
 		mX = e.clientX,
-				mY = e.clientY
+			mY = e.clientY
 	});
-	window.addEventListener("resize", function() {
+	window.addEventListener("resize", function () {
 		canvas.width = window.innerWidth;
 		canvas.height = window.innerHeight;
 	});
 	init();
-})();
+}
+export default {
+	// 将方法导出
+	startSnow
+}

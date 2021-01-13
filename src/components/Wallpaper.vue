@@ -1,14 +1,19 @@
 <template>
 <!-- 壁纸组件 -->
   <div class="wallpaper">
+    
+      <Shade/>
       <div v-if="nowImage" class="main-header" :style="{backgroundImage:'url('+nowImage.url+')'}">
       </div>
   </div>
 </template>
 
 <script>
+
+import Shade from "@/components/Shade.vue";
 export default {
   name: "Wallpaper",
+  components: { Shade},
   data() {
     return {
       nowImage: "" ,//当前url(仅作为默认值)
@@ -53,7 +58,7 @@ overflow: hidden;
 position: absolute;
 top: 0;
 left: 0;
-/* z-index: -10; */
+z-index: -10;
 box-shadow: 0 1px 2px rgba(150, 150, 150, .7);
 }
 </style>

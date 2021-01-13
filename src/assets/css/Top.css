@@ -6,9 +6,15 @@
     font: normal 800 60px "黑体";
   }
   .div {
-    vertical-align: middle;
-    display: inline-block;
+    /* vertical-align: middle; */
+    /* display: inline-block; */
+    position: absolute;
+    margin-top:20px;
+    margin-left: 40px;
   }
-  .input {
-    background: transparent;
+  /* 适配手机 */
+@media screen and (max-width: 640px) {
+  #login{
+    font: normal 800 40px "黑体";
   }
+}
