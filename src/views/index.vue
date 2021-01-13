@@ -1,24 +1,23 @@
 <template>
 <!-- 首页 -->
   <div class="index">
-    <Wallpaper />
-   <Top/>
-    <!-- <Shade/> -->
-    <Bottom/> 
+      <Top/>
+    <Wallpaper/>
+    <Focusinfo/>
+    <!-- <Bottom/>  -->
      <Xue/>  
   </div>
  
 </template>
 <script>
-
 import Xue from "@/components/Xue.vue";
 import Top from "@/components/Top.vue";
 import Wallpaper from "@/components/Wallpaper.vue";
 import Bottom from "@/components/Bottom.vue";
-// import Shade from "@/components/Shade.vue";
+import Focusinfo from "@/components/Focusinfo.vue";
 export default {
   name: "Index",
-  components: { Top,Xue, Wallpaper, Bottom },
+  components: { Top,Xue, Wallpaper, Bottom,Focusinfo },
   data() {
     return {
     };
@@ -27,7 +26,7 @@ export default {
     //加载html后调用
     },
   methods:{
-   
+  //清除缓存  https://purge.jsdelivr.net/
   }
 };
 </script>
@@ -37,7 +36,5 @@ export default {
   height: 100%;
   position: fixed;
   background-size: 100% 100%;
-  /* z-index: 99999; */
-  /* background-color: red */
 }
 </style>
