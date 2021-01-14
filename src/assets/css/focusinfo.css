@@ -19,7 +19,8 @@
     margin: auto;
     font-family: 'Ubuntu', sans-serif;
     font-size: 80px;
-    text-transform: uppercase;
+    /* 控制大小写 */
+    /* text-transform: uppercase; */
     font-weight: 800;
 }
 

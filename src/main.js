@@ -22,6 +22,7 @@ window._hmt = _hmt;
   s.parentNode.insertBefore(hm, s);
 })();
 
+//清除缓存  https://purge.jsdelivr.net/
 new Vue({
   render: h => h(App),
   router

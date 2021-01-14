@@ -4,7 +4,6 @@
       <Top/>
     <Wallpaper/>
     <Focusinfo/>
-    <!-- <Bottom/>  -->
      <Xue/>  
   </div>
  
@@ -23,11 +22,9 @@ export default {
     };
   },
     mounted(){
-    //加载html后调用
       this.print()
     },
   methods:{
-  //清除缓存  https://purge.jsdelivr.net/
     print(){
       console.log('%c 祝你越来越好趟过难关便生长.','color:#276ace;padding:10px 10px;font: normal 500 20px "黑体";')
     }
