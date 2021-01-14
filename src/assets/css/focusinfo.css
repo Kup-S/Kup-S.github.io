@@ -192,7 +192,7 @@
     border-width: 15px;
     border-style: solid;
     border-color: transparent transparent rgba(0, 0, 0, .4) transparent;
-}
+} 
 
 .header-info p {
     margin: 0;
@@ -206,6 +206,7 @@
     margin-left: 10px;
     list-style: none;
     display: inline-block;
+    width:320px;
 }
 
 .top-social_v2 li {
@@ -220,8 +221,8 @@
     background: 0 0;
 } */
 .link_img{
-    height: 27px;
-    width: 27px;
+    height: 30px;
+    width: 30px;
     padding: 6px;
     background: 0 0;
 }
@@ -243,4 +244,9 @@
     width: 25px;
     padding: 5px;
     background: 0 0;
+}
+@media screen and (max-width: 640px) {
+    .header-info:before{
+        display: none;
+    }
 }

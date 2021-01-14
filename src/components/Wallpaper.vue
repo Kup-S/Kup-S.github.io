@@ -23,6 +23,7 @@ export default {
       index: 0, //当前url下标
       path:
         "https://cdn.jsdelivr.net/gh/kup-s/pictureLibrary@master/api/imgList.json", //获取收藏夹图片列表
+      mobilePath:"https://cdn.jsdelivr.net/gh/kup-s/pictureLibrary@master/api/mobileList.json",//手机端图片列表
     };
   },
   created() {
@@ -35,8 +36,15 @@ export default {
   },
   methods: {
     assemble: function () {
+      let path=''
+      // console.log("宽度",window.screen.width)
+      if(window.screen.width>1000){
+           path=this.path;//电脑端
+      }else{
+           path=this.mobilePath;//手机端
+      }
       //  发送get请求
-      this.$http.get(this.path).then((res) => {
+      this.$http.get(path).then((res) => {
         this.imageList = res.data;
         this.index =
           Math.floor(Math.random() * (this.imageList.length - 1 - 0 + 1)) + 0; //随机图片
@@ -74,9 +82,6 @@ export default {
   height: 100vh;
   max-height: 100vh;
   text-align: center;
-  /* background-image: url("1646268-20190806172418911-2037584311.jpg"); */
-  /* background-image: url("rs7.top_app.vue_001.jpg"); */
-  /* background-image: url(https://img2018.cnblogs.com/blog/1646268/201908/1646268-20190806114008215-138720377.jpg); */
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -86,5 +91,7 @@ export default {
   left: 0;
   z-index: -10;
   box-shadow: 0 1px 2px rgba(150, 150, 150, 0.7);
+
+  /* background-size: 100% auto;  */
 }
 </style>
