@@ -31,14 +31,14 @@ const routes = [   //配置路由
 const router = new Router({
   routes: routes
 })
-// // 百度统计
-// router.beforeEach((to, from, next) => {
-//   if (window._hmt) {
-//     if (to.path) {
-//       window._hmt.push(['_trackPageview', '/#' + to.fullPath])
-//     }
-//   }
-//   next()
-// })
+// 百度统计
+router.beforeEach((to, from, next) => {
+  if (window._hmt) {
+    if (to.path) {
+      window._hmt.push(['_trackPageview', '/#' + to.fullPath])
+    }
+  }
+  next()
+})
 
 export default router;
