@@ -1,11 +1,13 @@
 // element ui 按需引入
 import {
 
+    Scrollbar,
+    // Avatar,
     // Input,
     // Card,
 
 
-    // Select,
+    // Select
     // Option,
     // OptionGroup,
     // InputNumber,
@@ -36,7 +38,6 @@ import {
     // Progress,
     // Pagination,
     // Badge,
-    // Avatar,
     // Alert,
     // Loading,
     // Message,
@@ -52,6 +53,8 @@ import {
 } from 'element-ui'
 const element = {
     install: function(Vue) {
+        Vue.use(Scrollbar)
+        // Vue.use(Avatar)
         // Vue.use(Card)
         // Vue.use(Select)
         // Vue.use(Option)
@@ -85,7 +88,6 @@ const element = {
         // Vue.use(Progress)
         // Vue.use(Pagination)
         // Vue.use(Badge)
-        // Vue.use(Avatar)
         // Vue.use(Alert)
         // Vue.use(Loading)
         // Vue.use(Menu)

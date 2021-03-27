@@ -18,9 +18,7 @@ export default {
 </script>
 
 <style>
-/* .xue{
-    border: 1px solid red;
-    width:100%;
-    z-index: 99999;
-} */
+.xue{
+  position: fixed;
+}
 </style>
