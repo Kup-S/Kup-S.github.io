@@ -3,8 +3,8 @@
   <div class="index" :style="{ height: scrollerHeight }">
     <el-scrollbar style="height: 100%">
         <a 
-          title="开始学习"
-          href="https://rs7.top/blog"
+          title="语雀"
+          href="https://yuque.com/kups"
         >
         <button class="custom-btn btn-3">
           <span>进入</span>
@@ -17,8 +17,8 @@
       <div class="index_bottom_a" align="center">
         <a
           target="_blank"
-          title="联系我"
-          href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=S3l7enx9ent_cnsLOjplKCQm"
+          title="发送邮件"
+          href="mailto:kupszz@163.com?subject=主题&body=来自rs7.top"
         >
           ©2021 Kups的技术分享站
         </a>|

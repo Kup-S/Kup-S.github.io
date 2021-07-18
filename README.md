@@ -13,6 +13,8 @@ npm run serve
 npm run build
 ```
 
+备：Kup-S.github.io
+
 **v:4.0**  
 **Kups**  
 **2020-12-14**

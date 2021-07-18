@@ -26,6 +26,14 @@ const router = new Router({
 })
 // 百度统计
 router.beforeEach((to, from, next) => {
+  // 短链接生成跳转预留 代码
+  // console.log("目标",to.redirectedFrom)
+  // var target=to.redirectedFrom;
+  // if(target!=undefined&&target.slice(1)=='aa'){
+    // 此处将 路径代码发送到后端获取url
+  //   window.location.replace("https://www.runoob.com");
+  // }
+  
   if (window._hmt) {
     if (to.path) {
       window._hmt.push(['_trackPageview', '/#' + to.fullPath])
