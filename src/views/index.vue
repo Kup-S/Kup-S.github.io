@@ -20,7 +20,7 @@
           title="发送邮件"
           href="mailto:kupszz@163.com?subject=主题&body=来自rs7.top"
         >
-          ©2021 Kups的技术分享站
+          ©2021 Kups-長樂
         </a>|
         <a href="http://beian.miit.gov.cn/" target="_blank"
           >冀ICP备2021005651号</a
